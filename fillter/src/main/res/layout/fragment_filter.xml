@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootFilter"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlack"
+   >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingRight="10dp"
+        android:id="@+id/toolbar"
+        android:paddingLeft="10dp"
+        android:background="@drawable/gradientbackground"
+        >
+
+        <ImageView
+            android:id="@+id/ivCancel"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_arrow_back"
+            />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Filter"
+            android:textStyle="bold"
+            android:textColor="@color/colorWhile"
+            android:textSize="20dp" />
+
+        <ImageView
+            android:id="@+id/ivCheck"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+
+            android:src="@drawable/nav_check"
+            android:tint="@color/colorWhile" />
+    </RelativeLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:id="@+id/frame"
+
+        android:layout_above="@+id/controller">
+
+        <com.hoanganhtuan95ptit.fillter.FilterView
+            android:id="@+id/filterView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+       <!-- <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/ivLoading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:indicatorColor="#FFE325"
+            app:indicatorName="PacmanIndicator" />-->
+
+    </FrameLayout>
+    <LinearLayout
+        android:id="@+id/controller"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:background="@drawable/gradientbackground"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    </LinearLayout>
+</RelativeLayout>

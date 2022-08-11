@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0"
+        android:fitsSystemWindows="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:id="@+id/rl_was_toolbar"
+            android:background="@drawable/gradientbackgroundtheme">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerInParent="true"
+                android:text="Songs"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_done"
+                android:id="@+id/iv_wave_done"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+
+      <!--  <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_grt_toolbar"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:layout_weight="1.0"
+                app:layout_scrollFlags="enterAlways|scroll"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:title="@string/select_music" />
+        </com.google.android.material.appbar.AppBarLayout>-->
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_was_toolbar"
+            android:background="@drawable/stack_drop_shadow"
+            android:contentDescription="@string/app_name"
+            android:minHeight="@dimen/_3sdp" />
+
+        <RelativeLayout
+            android:id="@+id/waveformParent"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/rl_was_toolbar"
+            android:layout_height="@dimen/_300sdp">
+
+            <com.example.fullscreenvideocreator.WaveSong.WaveformView
+                android:id="@+id/waveform"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <com.example.fullscreenvideocreator.WaveSong.MarkerView
+                android:id="@+id/startmarker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/start_marker"
+                android:nextFocusDown="@+id/endmarker"
+                android:src="@drawable/marker_left" />
+
+            <com.example.fullscreenvideocreator.WaveSong.MarkerView
+                android:id="@+id/endmarker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/end_marker"
+                android:nextFocusUp="@+id/startmarker"
+                android:src="@drawable/marker_right" />
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvMusicList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/llButton"
+            android:layout_below="@+id/waveformParent" />
+
+        <LinearLayout
+            android:id="@+id/llButton"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/gradientbackgroundtheme"
+            android:gravity="center">
+
+            <EditText
+                android:id="@+id/starttext"
+                android:layout_width="60.0dip"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:hint="@string/start"
+                android:inputType="numberDecimal"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/_12sdp" />
+
+            <ImageButton
+                android:id="@+id/rew"
+                style="@android:style/MediaButton"
+                android:layout_width="64.0dip"
+                android:layout_height="52.0dip"
+                android:layout_marginTop="6.0dip"
+                android:layout_marginBottom="6.0dip"
+                android:background="@drawable/bg_card_transparent"
+                android:clickable="true"
+                android:tint="@color/white"
+                android:contentDescription="@string/rewind"
+                android:src="@android:drawable/ic_media_previous" />
+
+            <ImageButton
+                android:id="@+id/play"
+                style="@android:style/MediaButton"
+                android:layout_width="71.0dip"
+                android:layout_height="52.0dip"
+                android:layout_marginTop="6.0dip"
+                android:layout_marginBottom="6.0dip"
+                android:background="@drawable/bg_card_transparent"
+                android:clickable="true"
+                android:tint="@color/white"
+                android:contentDescription="@string/play"
+                android:src="@android:drawable/ic_media_play" />
+
+            <ImageButton
+                android:id="@+id/ffwd"
+                style="@android:style/MediaButton"
+                android:layout_width="64.0dip"
+                android:layout_height="52.0dip"
+                android:layout_marginTop="6.0dip"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5.0dip"
+                android:layout_marginBottom="6.0dip"
+                android:background="@drawable/bg_card_transparent"
+                android:clickable="true"
+                android:tint="@color/white"
+                android:contentDescription="@string/ffwd"
+                android:src="@android:drawable/ic_media_next" />
+
+            <EditText
+                android:id="@+id/endtext"
+                android:layout_width="60.0dip"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:hint="@string/end"
+                android:inputType="numberDecimal"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/_12sdp" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/waveformParent"
+            android:background="@drawable/stack_drop_shadow_bottom_top"
+            android:contentDescription="@string/app_name"
+            android:minHeight="@dimen/_3sdp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/rvMusicList"
+            android:background="@drawable/stack_drop_shadow_bottom_top"
+            android:contentDescription="@string/app_name"
+            android:minHeight="@dimen/_3sdp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearAds"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+</LinearLayout>

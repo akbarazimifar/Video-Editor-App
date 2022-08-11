@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.fullscreenvideocreator.widget.MovieBottomView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/demo_bottom_height"
+    android:background="@color/movie_bottom_bg"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/movie_filter"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="34dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_movie_filter" />
+
+    <TextView
+        android:id="@+id/movie_filter_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/movie_filter"
+        android:textColor="#FFFFFF"
+        app:layout_constraintLeft_toLeftOf="@id/movie_filter"
+        app:layout_constraintRight_toRightOf="@id/movie_filter"
+        app:layout_constraintTop_toBottomOf="@id/movie_filter" />
+
+    <ImageView
+        android:id="@+id/movie_transfer"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="34dp"
+        app:layout_constraintLeft_toRightOf="@+id/movie_filter"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_movie_transfer" />
+
+    <TextView
+        android:id="@+id/movie_transfer_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/movie_transfer"
+        android:textColor="#FFFFFF"
+        app:layout_constraintLeft_toLeftOf="@id/movie_transfer"
+        app:layout_constraintRight_toRightOf="@id/movie_transfer"
+        app:layout_constraintTop_toBottomOf="@id/movie_transfer" />
+
+    <ImageView
+        android:id="@+id/movie_music"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="34dp"
+        app:layout_constraintLeft_toRightOf="@+id/movie_transfer"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_movie_music" />
+
+    <TextView
+        android:id="@+id/movie_music_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/movie_music"
+        android:textColor="#FFFFFF"
+        app:layout_constraintLeft_toLeftOf="@id/movie_music"
+        app:layout_constraintRight_toRightOf="@id/movie_music"
+        app:layout_constraintTop_toBottomOf="@id/movie_music" />
+
+
+</com.example.fullscreenvideocreator.widget.MovieBottomView>

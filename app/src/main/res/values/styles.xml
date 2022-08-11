@@ -1,0 +1,37 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorOrange</item>
+        <item name="colorAccent">@color/colorOrange</item>
+     <!--   <item name="android:windowFullscreen">true</item>
+        <item name="android:navigationBarColor">@color/colorBlack</item>-->
+    </style>
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_up</item>
+       <!-- <item name="android:windowExitAnimation">@anim/slide_down</item>-->
+    </style>
+    <style name="DialogAnimation_back">
+        <item name="android:windowEnterAnimation">@anim/zoom_in</item>
+       <!-- <item name="android:windowExitAnimation">@anim/slide_down</item>-->
+    </style>
+
+    <style name="MovieMakerAlertDialog" parent="@style/Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowAnimationStyle">@style/PauseDialogAnimation</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="PauseDialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/anim_scale_in</item>
+        <item name="android:windowExitAnimation">@anim/anim_scale_out</item>
+    </style>
+
+    <style name="AppTheme_ActionBar" parent="@style/AppTheme">
+        <item name="windowActionBar">true</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+</resources>

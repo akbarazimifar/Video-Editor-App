@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activities.ActivitySelectImages">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@drawable/gradientbackgroundtheme"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:id="@+id/iv_edit_selectedimage"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_newbackarrow" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:text=" Select Images "
+                android:textColor="@color/colorWhite"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/colorLightGray2"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:gravity="center"
+                android:layout_weight="7"
+                >
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/rv_singlefolderimages">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:background="@color/colorBlack"
+                android:layout_weight="4">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="4"
+                    android:background="@color/colorBlack"
+                    android:orientation="horizontal">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/rv_selectimage">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="6"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:background="@color/colorPink"
+                        >
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <!--<TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Selected Image :"
+                                android:textStyle="bold"
+                                android:id="@+id/tv_selectedimage"
+                                android:layout_centerInParent="true"
+                                android:layout_centerVertical="true"
+                                android:textColor="@color/colorWhite"
+                                android:layout_gravity="center"/>-->
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:id="@+id/iv_delete_selectedimage"
+                                android:layout_centerVertical="true"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/ic_delete" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" 0"
+                                android:textStyle="bold"
+                                android:layout_toRightOf="@+id/iv_delete_selectedimage"
+                                android:layout_centerInParent="true"
+                                android:id="@+id/tv_countselectedimage"
+                                android:layout_centerVertical="true"
+                                android:textColor="@color/colorWhite"
+                                android:layout_gravity="center"/>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:gravity="center"
+                                android:id="@+id/ll_nextbtn"
+                                android:background="@color/colorWhite"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentRight="true">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="NEXT"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/colorPink" />
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:id="@+id/iv_nextbtn"
+                                    android:src="@drawable/ic_right_arrow"
+                                    android:tint="@color/colorPink"/>
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        >
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/rv_single_selectedImage">
+
+                        </androidx.recyclerview.widget.RecyclerView>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/colorBlack">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:id="@+id/facbook_ad_banner1"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+            </LinearLayout>
+
+            <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/adView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                ads:adSize="BANNER"
+                ads:adUnitId="@string/banner_home_footer" />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

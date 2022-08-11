@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/gradientbackgroundtheme"
+
+    tools:context=".Activities.ActivityMyVideo">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@drawable/gradientbackgroundtheme"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/toolbar"
+            android:paddingLeft="13dp"
+            android:paddingRight="13dp">
+            <ImageView
+                android:id="@+id/iv_backarrow"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:tint="@color/colorWhite"
+                android:src="@drawable/ic_newbackarrow"
+                android:layout_centerVertical="true"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My Video"
+                android:textSize="22dp"
+                android:textColor="@color/colorWhite"
+                android:layout_centerInParent="true"
+                android:textStyle="bold"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="5dp"
+        android:orientation="vertical">
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+           <androidx.recyclerview.widget.RecyclerView
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+                app:reverseLayout="true"
+               app:stackFromEnd="true"
+               android:id="@+id/rv_myvideolist">
+
+           </androidx.recyclerview.widget.RecyclerView>
+           <RelativeLayout
+               android:id="@+id/rl_videonotfound"
+               android:layout_width="match_parent"
+               android:visibility="gone"
+               android:layout_height="match_parent">
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_centerInParent="true"
+                   android:gravity="center">
+                   <ImageView
+                       android:layout_width="150dp"
+                       android:layout_height="150dp"
+                       android:src="@drawable/novideo_2"/>
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:textColor="@color/colorWhite"
+                       android:textSize="30dp"
+                       android:text="Video Not Found"/>
+               </LinearLayout>
+           </RelativeLayout>
+
+       </RelativeLayout>
+
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradientbackgroundtheme"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:id="@+id/facbook_ad_banner"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+        </LinearLayout>
+        <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/banner_home_footer" />
+
+    </RelativeLayout>
+</LinearLayout>

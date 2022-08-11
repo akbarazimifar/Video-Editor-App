@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorLightGray"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <RelativeLayout
+        android:id="@+id/rl_duration"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="SELECT DURATION"
+            android:textColor="@color/colorWhite"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+</RelativeLayout>

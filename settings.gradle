@@ -1,0 +1,3 @@
+include ':app', ':dynamicdemo', ':videolibrary', ':brightness', ':library', ':contrast', ':crop', ':fillter', ':rotate', ':saturation'
+
+

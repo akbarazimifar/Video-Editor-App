@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginRight="@dimen/_10sdp"
+    android:layout_marginTop="@dimen/_10sdp"
+    android:gravity="center_vertical">
+    <ImageView
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:src="@drawable/music_icon"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:id="@+id/tv_song_name"
+        android:layout_weight="1"
+        android:singleLine="true"
+        android:layout_marginRight="@dimen/_60sdp"
+        android:ellipsize="marquee"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:text="hdfjhasdjhdhdhh"
+        android:scrollHorizontally="true"
+        />
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/radioMusicName"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_card_transparent"
+        android:button="@null"
+        android:layout_alignParentRight="true"
+        android:drawableLeft="@drawable/ic_music"
+        android:drawableEnd="?android:listChoiceIndicatorMultiple"
+        android:drawableRight="?android:listChoiceIndicatorMultiple"
+        android:drawablePadding="20.0dip"
+        android:ellipsize="marquee"
+        android:gravity="center_vertical"
+        android:padding="@dimen/_10sdp"
+        android:minHeight="?listPreferredItemHeightSmall"
+
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12sdp" />
+
+</LinearLayout>

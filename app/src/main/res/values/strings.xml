@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Full Screen Video Creator</string>
+
+    <string name="interstitial_full_screen">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="admob_app_id">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="banner_home_footer">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="facebook_banner_id">590352208175905_590352491509210</string>
+    <string name="facebook_interstitial_Ad">590352208175905_590353074842485</string>
+
+    <string name="movie_filter">filter</string>
+    <string name="movie_transfer">transfer</string>
+    <string name="movie_music">music</string>
+    <string name="movie_next">next</string>
+    <string name="select_photos">select photos</string>
+
+    <!--Wave Audio Song-->
+
+    <string name="start_marker">Start marker</string>
+    <string name="end_marker">End marker</string>
+    <string name="start">Start</string>
+    <string name="rewind">Rewind</string>
+    <string name="play">Play</string>
+    <string name="stop">Stop</string>
+    <string name="ffwd">Fast forward</string>
+    <string name="end_label">End:</string>
+    <string name="end">End</string>
+    <string name="delete_tmp_error">Error deleting temporary file</string>
+    <string name="progress_dialog_loading">Loading&#8230;</string>
+    <string name="no_extension_error">"Sorry, audiocutter can't edit a file if it doesn't have an extension like .mp3 or .wav"</string>
+    <string name="bad_extension_error">Sorry, Audiocutter is not yet able to edit files of type</string>
+    <string name="play_error">Unable to play this media file</string>
+    <string name="alert_title_success">Success</string>
+    <string name="alert_title_failure">Error</string>
+    <string name="alert_ok_button">OK</string>
+    <string name="no_unique_filename">Unable to find unique filename</string>
+    <string name="no_space_error">Your SD card is full, there is not enough space to save this file.</string>
+    <string name="write_error">Error writing file</string>
+    <string name="too_small_error">"Can't save a file that small, try making it longer."</string>
+    <string name="progress_dialog_saving">Saving&#8230;</string>
+    <string name="artist_name">Movie maker</string>
+
+
+</resources>

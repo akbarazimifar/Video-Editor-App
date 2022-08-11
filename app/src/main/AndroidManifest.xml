@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.fullscreenvideocreator">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/fullscreenvideomaker"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@drawable/fullscreenvideomaker"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name="com.example.fullscreenvideocreator.Activities.ActivityRawMusic"></activity>
+        <activity android:name="com.example.fullscreenvideocreator.Activities.ActivityMyVideo" />
+        <activity android:name="com.example.fullscreenvideocreator.Activities.ActivityVideoPreview" />
+        <activity android:name="com.example.fullscreenvideocreator.Activities.ActivityImageEditor" />
+        <activity android:name="com.example.fullscreenvideocreator.Activities.ActivityFont" />
+        <activity android:name="com.example.fullscreenvideocreator.Activities.ActivityAboutUs" />
+        <activity android:name="com.example.fullscreenvideocreator.WaveSong.MusicListActivity"></activity>
+        <activity
+            android:name="com.example.fullscreenvideocreator.activityAnim.AnimActivity"
+            android:hardwareAccelerated="true"
+            android:label="@string/app_name" />
+        <activity android:name="com.example.fullscreenvideocreator.Activities.DemoActivity" />
+        <activity android:name="com.example.fullscreenvideocreator.Activities.ActivityListSelectedPhotos" />
+        <activity android:name="com.example.fullscreenvideocreator.Activities.ActivitySelectImages" />
+        <activity android:name="com.example.fullscreenvideocreator.Activities.ActivityLoading" />
+        <activity android:name="com.example.fullscreenvideocreator.Activities.ActivityHome" />
+        <activity android:name="com.example.fullscreenvideocreator.Activities.ActivitySplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.fullscreenvideocreator.MainActivity" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/admob_app_id" />
+    </application>
+
+</manifest>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#0A0A0A</color>
+    <color name="colorLightBlack">#D70A0A0A</color>
+    <color name="colorGray">#940A0A0A</color>
+    <color name="colorLightGray">#720A0A0A</color>
+    <color name="colorLightGray2">#1D0A0A0A</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="colorBlue">#5D3197</color>
+    <color name="colorPink">#FF5722</color>
+    <!--  <color name="colorPink">#EC407A</color>-->
+   <!-- <color name="colorLightPink">#B2EC407A</color>-->
+    <color name="colorLightPink">#A1FF5722</color>
+    <color name="colorOrange">#FF5722</color>
+    <color name="colorLightPink2">#83EC407A</color>
+
+    <color name="thumb_background_color">#000000</color>
+    <color name="zomato_red">#a40100</color>
+    <color name="placeholder_background">#222322</color>
+
+    <color name="movie_bottom_bg">#7F000000</color>
+
+    <color name="grid_line">#00FFFFFF</color>
+    <color name="waveform_selected">#47EFF3</color>
+    <color name="waveform_unselected">#9B9E9D</color>
+    <color name="waveform_unselected_bkgnd_overlay">#33000000</color>
+    <color name="selection_border">#ffffff</color>
+    <color name="playback_indicator">#FF293B</color>
+    <color name="timecode">#ddffffdd</color>
+    <color name="timecode_shadow">#aa000000</color>
+
+    <color name="white">#ffffffff</color>
+    <color name="black">#000000</color>
+
+</resources>
